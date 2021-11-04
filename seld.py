@@ -12,6 +12,7 @@ import keras_model
 import parameter
 import time
 
+
 def dump_DCASE2021_results(_data_gen, _feat_cls, _dcase_output_folder, _sed_pred, _doa_pred):
     '''
     Write the filewise results to individual csv files
@@ -40,6 +41,7 @@ def get_accdoa_labels(accdoa_in, nb_classes):
     sed = np.sqrt(x**2 + y**2 + z**2) > 0.5
       
     return sed, accdoa_in
+
 
 def main(argv):
     """

@@ -11,10 +11,12 @@ def get_params(argv='1'):
         quick_test=False,           # If True: Trains/test on small subset of dataset, and # of epochs
 
         # INPUT PATH
-        dataset_dir='/scratch/asignal/sharath/DCASE2021_SELD_dataset/',  # Base folder containing the foa_dev/mic_dev and metadata folders
+        # dataset_dir='/scratch/asignal/sharath/DCASE2021_SELD_dataset/',  # Base folder containing the foa_dev/mic_dev and metadata folders
+        dataset_dir='/media/sedur/data/datasets/tau-nigens/',
 
         # OUTPUT PATH
-        feat_label_dir='/scratch/asignal/sharath/DCASE2021_SELD_dataset/seld_feat_label/',  # Directory to dump extracted features and labels
+        # feat_label_dir='/scratch/asignal/sharath/DCASE2021_SELD_dataset/seld_feat_label/',  # Directory to dump extracted features and labels
+        feat_label_dir='/media/sedur/data/datasets/tau-nigens/seld_feat_label/',
         model_dir='models/',            # Dumps the trained models and training curves in this folder
         dcase_output_dir='results/',    # recording-wise results are dumped in this path.
 
@@ -33,7 +35,7 @@ def get_params(argv='1'):
         is_accdoa=True,             # True: Use ACCDOA output format
         doa_objective='mse',        # if is_accdoa=True this is ignored, otherwise it supports: mse, masked_mse. where mse- original seld approach; masked_mse - dcase 2020 approach
 
-        label_sequence_length=60,   # Feature sequence length
+        label_sequence_length=64,   # Feature sequence length 60
         batch_size=256,             # Batch size
         dropout_rate=0.05,          # Dropout rate, constant for all layers
         nb_cnn2d_filt=64,           # Number of CNN nodes, constant for each layer
